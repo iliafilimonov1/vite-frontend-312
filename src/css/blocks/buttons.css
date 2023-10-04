@@ -103,23 +103,23 @@ a:focus {
 /******************************************************************/
 /* Button Secondary */
 /******************************************************************/
-[data-btn="secondary"] {
+[data-variant="secondary"] {
     background-color: var(--button-button-secondary);
     border: 0.2rem solid var(--button-button-secondary);
     color: var(--text-text-on-color);
     cursor: pointer;
 }
 
-[data-btn="secondary"] path {
+[data-variant="secondary"] path {
     fill: var(--text-text-on-color);
 }
 
-[data-btn="secondary"]:hover {
+[data-variant="secondary"]:hover {
     background-color: var(--button-button-secondary-hover);
     border: 0.2rem solid var(--button-button-secondary-hover);
 }
 
-[data-btn="secondary"]:focus {
+[data-variant="secondary"]:focus {
     background-color: var(--button-button-secondary);
     border: 0.2rem solid var(--focus-focus);
     box-shadow: var(--focus-box-shadow);
@@ -130,7 +130,7 @@ a:focus {
 /* Button Disabled Primary, Secondary, Danger-Primary */
 /******************************************************************/
 [data-btn="primary"][disabled],
-[data-btn="secondary"][disabled],
+[data-variant="secondary"][disabled],
 [data-btn="danger-primary"][disabled] {
     background-color: var(--button-button-disabled);
     border: 0.2rem solid var(--button-button-disabled);
@@ -139,7 +139,7 @@ a:focus {
 }
 
 [data-btn="primary"][disabled] path,
-[data-btn="secondary"][disabled] path,
+[data-variant="secondary"][disabled] path,
 [data-btn="danger-primary"][disabled] path {
     fill: var(--text-text-on-color-disabled);
 }
