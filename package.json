@@ -33,6 +33,7 @@
     ]
   },
   "dependencies": {
-    "@babel/preset-env": "^7.22.5"
+    "@babel/preset-env": "^7.22.5",
+    "swiper": "^10.3.1"
   }
 }
