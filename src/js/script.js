@@ -1,4 +1,6 @@
 import {Modal} from "./components/modal";
+import Swiper from "swiper/bundle"; // Инициализация слайдера
+import {Navigation, Pagination} from "swiper/modules"; // Инициализация иконок, пагинации и т.д.
 
 // Модалка формы
 const modalForm = new Modal("#modal", "#signup");
@@ -6,6 +8,25 @@ console.log(modalForm);
 // Модалка навигации в мобилке
 const modalNav = new Modal("#modal-nav", ".burger-menu");
 console.log(modalNav);
+
+/* Слайдер в баннере */
+const swiper = new Swiper(".swiper", {
+    modules: [ Navigation, Pagination ],
+    direction: "horizontal",
+    // autoplay: {
+    //     delay: 2000,
+    // },
+    // Navigation arrows
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+console.log('swiper', swiper);
 
 const inputText = document.querySelector("#register-username");
 
