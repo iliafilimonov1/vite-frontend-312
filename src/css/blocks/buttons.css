@@ -25,8 +25,8 @@ a,
 }
 
 .btn-icon {
-    cursor: auto;
     min-width: 4rem;
+    cursor: auto;
 }
 
 button img,
@@ -53,10 +53,6 @@ a:focus {
     border: var(--link-border-focus);
     transition: border 0.3s ease-in-out;
 }
-
-/* [data-variant="primary"] [data-icon="icon"] {
-  margin-left: 1.4rem;
-} */
 
 /*****************************************************************   */
 
@@ -122,7 +118,6 @@ a:focus {
     background-color: var(--button-button-secondary);
     border: 0.2rem solid var(--button-button-secondary);
     color: var(--text-text-on-color);
-    cursor: pointer;
 }
 
 [data-variant="secondary"] path {
@@ -205,7 +200,6 @@ a:focus {
     background-color: var(--background-background);
     border: 0.2rem solid var(--button-button-danger-primary);
     color: var(--button-button-danger-primary);
-    cursor: pointer;
 }
 
 [data-variant="danger-tertiary"] path {
@@ -258,7 +252,6 @@ a:focus {
     background-color: var(--background-background);
     border: 0.2rem solid var(--background-background);
     color: var(--link-link-primary);
-    cursor: pointer;
 }
 
 [data-variant="ghost"] path {
@@ -293,7 +286,6 @@ a:focus {
     background-color: var(--background-background);
     border: 0.2rem solid var(--background-background);
     color: var(--button-button-danger-primary);
-    cursor: pointer;
 }
 
 [data-variant="danger-ghost"] path {
@@ -338,4 +330,26 @@ a:focus {
 [data-variant="ghost"][disabled] path,
 [data-variant="danger-ghost"][disabled] path {
     fill: var(--button-button-disabled);
+}
+
+/* иконки закрытия в модалках  */
+.modal .btn-icon {
+    justify-content: center;
+    cursor: auto;
+    min-width: 4rem;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+}
+
+.modal .btn-icon:hover,
+.modal .btn-icon:focus {
+    background-color: var(--background-background-hover);
+}
+
+.modal .btn-icon path {
+    fill: var(--title-color);
 }
