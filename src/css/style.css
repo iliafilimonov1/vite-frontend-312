@@ -7,3 +7,4 @@
 /* подключение слайдера */
 @import "swiper/css/bundle";
 @import "../css/blocks/banner.css";
+@import "../css/blocks/tasks.css";
