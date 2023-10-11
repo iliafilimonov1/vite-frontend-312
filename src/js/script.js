@@ -1,5 +1,5 @@
 import {Modal} from "./components/modal";
-import Swiper from "swiper/bundle"; // Инициализация слайдера
+import Swiper from "swiper"; // Инициализация слайдера
 import {Navigation, Pagination} from "swiper/modules"; // Инициализация иконок, пагинации и т.д.
 
 // Модалка формы
@@ -13,10 +13,6 @@ console.log(modalNav);
 const swiper = new Swiper(".swiper", {
     modules: [ Navigation, Pagination ],
     direction: "horizontal",
-    // autoplay: {
-    //     delay: 2000,
-    // },
-    // Navigation arrows
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -25,6 +21,9 @@ const swiper = new Swiper(".swiper", {
         el: ".swiper-pagination",
         clickable: true,
     },
+    // breakpoints: {
+    //     545: {},
+    // },
 });
 console.log('swiper', swiper);
 
