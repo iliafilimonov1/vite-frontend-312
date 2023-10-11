@@ -45,6 +45,13 @@ p {
     flex-wrap: wrap;
 }
 
+.flex-start {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .ml-8 {
     margin-left: 0.8rem;
 }

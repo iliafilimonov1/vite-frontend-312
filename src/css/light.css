@@ -42,6 +42,9 @@
     /* Focus */
     --focus-focus: #0f62fe;
     --focus-box-shadow: 0px 0px 0px 0.1rem #ffffff inset;
+
+    /* cards background */
+    --cards-bgc: #f4f4f4;
 }
 
 /* logo */
