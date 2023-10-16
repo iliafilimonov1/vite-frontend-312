@@ -94,7 +94,7 @@
                 "camelCaseSvgKeywords": true
             }
         ],
-        "value-no-vendor-prefix": true,
+        "value-no-vendor-prefix": null,
 
         "codeguide/at-rule-name-case": "lower",
         "codeguide/at-rule-name-space-after": "always",
