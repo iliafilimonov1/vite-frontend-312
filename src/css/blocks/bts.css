@@ -1,7 +1,35 @@
-.left {
-    background-color: tomato;
+/* переопределение стилей bootstrap */
+
+
+.navbar-nav {
+    width: 24rem;
+
+    justify-content: space-between;
 }
 
-.right {
-    background-color: #c3c3c3;
+.nav-link {
+    --bs-nav-link-font-size: 17px;
 }
+
+.btn {
+    border-radius: 5.95px;
+    --bs-btn-padding-x: 2rem;
+    --bs-btn-padding-y: 0.87rem;
+}
+
+.btn-success {
+    --bs-btn-bg: #75bf7a;
+    border-color: transparent;
+}
+
+.navbar {
+    padding-top: 4rem;
+    padding-bottom: 2.4rem;
+    background-color: aquamarine;
+}
+
+/* @media (min-width: 576px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+} */
