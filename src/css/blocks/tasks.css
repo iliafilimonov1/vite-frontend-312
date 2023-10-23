@@ -118,6 +118,7 @@
     overflow-x: hidden;
     text-overflow: ellipsis;
     max-width: 16rem;
+    line-height: 2rem;
 }
 
 .card-text__title,
@@ -195,6 +196,7 @@
 /* skeleton */
 .skeleton {
     position: relative;
+    border: 2px solid var(--skeleton-gradient);
 }
 
 .skeleton::before {
@@ -207,7 +209,7 @@
     width: 100%;
     height: 100%;
     z-index: 3;
-    background: linear-gradient(90deg, #eeeeee, #f9f9f9, #eeeeee);
+    background: var(--skeleton-gradient);
     background-size: 200%;
     animation: skeleton 1s infinite reverse;
 }

@@ -127,3 +127,7 @@ dialog {
 dialog::backdrop {
     --modal-overlay: rgba(22, 22, 22, 0.5); /* оверлей */
 }
+
+.skeleton::before {
+    --skeleton-gradient: linear-gradient(90deg, #eeeeee, #f9f9f9, #eeeeee);
+}
