@@ -1,0 +1,191 @@
+:root {
+  /* Primary colors */
+  --purple: #7b6ef6;
+  --white: #fff;
+  --black: #000;
+  --red: #ff385c;
+  --gray-dark: #2d2d2d;
+  --gray: #737373;
+  --light-gray: #767e94;
+  --blue: #121829;
+  --dark-blue: #232947;
+  --orange: #ffad49;
+  --input: rgb(148 163 184 / 10%);
+}
+
+.details {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.details-flex {
+  display: flex;
+  max-width: 100rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.details-card {
+  width: 40rem;
+  height: 100%;
+  max-height: 40rem;
+  margin: 26px 0;
+}
+
+.details-card:hover {
+  cursor: pointer;
+}
+
+.card-image::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black);
+  transition-duration: 0s;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+}
+
+.details-card:hover .details-image::after {
+  opacity: 0.1;
+}
+
+.card-info {
+  position: absolute;
+  z-index: 2;
+  bottom: 24px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.information-descrption {
+  display: flex;
+  flex-direction: column;
+}
+
+.descrption-title {
+  font-size: 6rem;
+  margin-bottom: 2.4rem;
+  color: var(--title-color);
+}
+
+.descrption-subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 3.2rem;
+  color: var(--subtitle-color);
+}
+
+.descrption-subtitle + p {
+  margin-bottom: 20px;
+}
+
+.details-rating {
+  padding: 8px;
+  max-width: 100px;
+  display: inline-block;
+  background: var(--dark-blue);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+
+.rating-img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.details-heart {
+  display: inline-block;
+  fill: var(--black);
+  opacity: 0.5;
+  height: 24px;
+  width: 24px;
+  stroke: var(--white);
+  stroke-width: 2;
+  vertical-align: middle;
+}
+
+.heart-active {
+  fill: var(--red);
+}
+
+.details-card__content {
+  padding: 20px;
+}
+
+.card-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--white);
+}
+
+.list-group {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+/* swiper slider main and shop pages  */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+
+  --swiper-navigation-color: var(--white);
+  --swiper-navigation-size: 28px;
+
+  width: var(--swiper-navigation-size);
+  height: var(--swiper-navigation-size);
+  background-color: var(--swiper-navigation-color);
+  border-radius: 50%;
+  color: var(--gray-dark);
+}
+
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
+
+.details-card:hover .swiper-button-next,
+.details-card:hover .swiper-button-prev {
+  display: flex;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: calc(var(--swiper-navigation-size) / 3);
+}
+
+.swiper-scrollbar-drag {
+  --swiper-scrollbar-drag-bg-color: var(--gray-dark);
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 4px;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-width: 6px;
+  --swiper-pagination-bullet-height: 6px;
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-theme-color: #fff;
+}

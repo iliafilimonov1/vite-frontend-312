@@ -1,249 +1,286 @@
 .cards {
-    padding: 3rem 0;
-    position: relative;
+  padding: 3rem 0;
+  position: relative;
 }
 
 .card-wrapper {
-    border-top: 0.3rem solid transparent;
-    min-height: 48rem;
-    position: relative;
-    flex-basis: 24%;
-    display: inline-flex;
-    margin-bottom: 2.4rem;
-    transition: 0.7s;
-    background-color: var(--cards-bgc);
+  border-top: 0.3rem solid transparent;
+  min-height: 48rem;
+  position: relative;
+  flex-basis: 24%;
+  display: inline-flex;
+  margin-bottom: 2.4rem;
+  transition: 0.7s;
+  background-color: var(--cards-bgc);
 }
 
 .card-wrapper:hover .card-image img {
-    transform: scale(1.12);
-    transition: 2.2s;
+  transform: scale(1.12);
+  transition: 2.2s;
 }
 
 .card-wrapper:hover a {
-    border-color: transparent;
+  border-color: transparent;
 }
 
 .card-wrapper:focus {
-    outline: none;
-    border: 0;
+  outline: none;
+  border: 0;
 }
 
 .card {
-    width: 100%;
-    background-color: var(--cds-theme-bgc);
-    color: var(--title-color);
+  width: 100%;
+  background-color: var(--cds-theme-bgc);
+  color: var(--title-color);
 }
 
 .card img {
-    width: 100%;
-    /* явно растягиваем по ширине родителя */
-    max-width: 100%;
-    height: 24rem;
-    /* убираем зазор снизу */
-    object-fit: cover;
-    transition: 1.2s;
+  width: 100%;
+
+  /* явно растягиваем по ширине родителя */
+  max-width: 100%;
+  height: 24rem;
+
+  /* убираем зазор снизу */
+  object-fit: cover;
+  transition: 1.2s;
 }
 
 .card-image {
-    min-height: 24rem;
-    position: relative;
-    overflow: hidden;
+  min-height: 24rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-wrapper:hover .card-image::after {
-    background-color: black;
-    right: 0;
-    transition-duration: 0s;
-    transition-property: opacity;
-    transition-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
-    opacity: 0.2;
-    content: "";
-    display: block;
-    pointer-events: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
+  background-color: black;
+  right: 0;
+  transition-duration: 0s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+  opacity: 0.2;
+  content: '';
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .card-link {
-    display: block;
-    height: 100%;
-    max-width: 100%;
-    width: 100%;
-    position: absolute;
-    background: transparent;
-    z-index: 1;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  background: transparent;
+  z-index: 1;
 }
 
 .card-link:focus {
-    border-color: transparent;
+  border-color: transparent;
 }
 
 .card-heart {
-    display: inline-flex;
-    fill: rgba(0, 0, 0, 0.5);
-    height: 2.4rem;
-    width: 2.4rem;
-    stroke: #ffffff;
-    stroke-width: 1.4;
-    vertical-align: middle;
-    position: absolute;
-    /* перекрытие кликабельной ссылки на карточке */
-    z-index: 1;
-    top: 1.8rem;
-    right: 1.8rem;
+  display: inline-flex;
+  fill: rgb(0 0 0 / 50%);
+  height: 2.4rem;
+  width: 2.4rem;
+  stroke: #fff;
+  stroke-width: 1.4;
+  vertical-align: middle;
+  position: absolute;
+
+  /* перекрытие кликабельной ссылки на карточке */
+  z-index: 1;
+  top: 1.8rem;
+  right: 1.8rem;
 }
 
 .heart-active {
-    fill: #da1e28;
+  fill: #da1e28;
 }
 
 .card-host {
-    padding: 0.4rem 0.8rem;
-    position: absolute;
-    top: 1.8rem;
-    left: 1.8rem;
-    font-size: 1.4rem;
-    font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  position: absolute;
+  top: 1.8rem;
+  left: 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .card-text {
-    padding: 1.6rem 1.6rem 0 1.6rem;
+  padding: 1.6rem 1.6rem 0;
 }
 
 .card-text__title {
-    white-space: nowrap;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
-    max-width: 16rem;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  max-width: 16rem;
+  line-height: 2rem;
 }
 
 .card-text__title,
 .card-text__rating {
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-    font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
 }
 
 .card-text__rating svg {
-    margin-right: 0.4rem;
+  margin-right: 0.4rem;
 }
 
 .card-text__rating svg path {
-    fill: var(--title-color);
+  fill: var(--title-color);
 }
 
 .text-secondary {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin-bottom: 0.8rem;
-    color: var(--cds-grey-400);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  color: var(--cds-grey-400);
 }
 
 .card-text__descr {
-    display: box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  display: box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-text__price {
-    width: 57%;
+  width: 57%;
 }
 
 .price-prev {
-    text-decoration: line-through;
-    font-weight: 600;
+  text-decoration: line-through;
+  font-weight: 600;
 }
 
 .price-current {
-    font-weight: 600;
-    position: relative;
+  font-weight: 600;
+  position: relative;
 }
 
 .km,
 .date {
-    color: var(--cds-grey-400);
-    font-size: 1.2rem;
-    line-height: 14px;
+  color: var(--cds-grey-400);
+  font-size: 1.2rem;
+  line-height: 14px;
 }
 
 .night {
-    font-size: 14px;
-    line-height: 17px;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .card-bottom {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    min-height: 4.8rem;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: flex-end;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  min-height: 4.8rem;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.card-bottom [data-variant="primary"] {
-    flex: 1;
-    max-height: 100%;
+.card-bottom [data-variant='primary'] {
+  flex: 1;
+  max-height: 100%;
+}
+
+/* pagination dynamic cards */
+
+/* skeleton */
+.skeleton {
+  position: relative;
+  border: 2px solid var(--skeleton-gradient);
+}
+
+.skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: var(--skeleton-gradient);
+  background-size: 200%;
+  animation: skeleton 1s infinite reverse;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 /* адаптив */
 @media screen and (max-width: 1220px) {
-    .card-wrapper {
-        flex-basis: 32.5%;
-    }
+  .card-wrapper {
+    flex-basis: 32.5%;
+  }
 }
 
 @media screen and (max-width: 968px) {
-    .card-wrapper {
-        flex-basis: 49.5%;
-        margin-bottom: 0.6rem;
-    }
+  .card-wrapper {
+    flex-basis: 49.5%;
+    margin-bottom: 0.6rem;
+  }
 
-    .card-image {
-        min-height: 26rem;
-    }
+  .card-image {
+    min-height: 26rem;
+  }
 
-    .card img {
-        height: 26rem;
-    }
+  .card img {
+    height: 26rem;
+  }
 
-    .card-text__price {
-        width: 50%;
-    }
+  .card-text__price {
+    width: 50%;
+  }
 
-    .text-secondary,
-    .km,
-    .date {
-        font-size: 1.6rem;
-    }
+  .text-secondary,
+  .km,
+  .date {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .card-wrapper {
-        flex-basis: 100%;
-        min-height: 46rem;
-        margin-bottom: 1.4rem;
-    }
+  .card-wrapper {
+    flex-basis: 100%;
+    min-height: 46rem;
+    margin-bottom: 1.4rem;
+  }
 
-    .card-image {
-        min-height: 24rem;
-    }
+  .card-image {
+    min-height: 24rem;
+  }
 
-    .card img {
-        height: 24rem;
-    }
+  .card img {
+    height: 24rem;
+  }
 
-    .card-bottom {
-        min-height: 4.8rem;
-    }
+  .card-bottom {
+    min-height: 4.8rem;
+  }
 
-    .card-bottom [data-btn="primary"] {
-        max-width: 100%;
-    }
+  .card-bottom [data-btn='primary'] {
+    max-width: 100%;
+  }
 }
