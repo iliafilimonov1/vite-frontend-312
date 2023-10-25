@@ -1,10 +1,11 @@
-@import "../css/vendor/normalize.css";
-@import "../css/main.css";
-@import "../css/blocks/buttons.css";
-@import "../css/blocks/forms.css";
-@import "../css/blocks/header.css";
-@import "../css/blocks/modal.css";
+@import '../css/vendor/normalize.css';
+@import '../css/main.css';
+@import '../css/blocks/buttons.css';
+@import '../css/blocks/forms.css';
+@import '../css/blocks/header.css';
+@import '../css/blocks/modal.css';
+
 /* подключение слайдера */
-@import "swiper/css/bundle";
-@import "../css/blocks/banner.css";
-@import "../css/blocks/tasks.css";
+@import 'swiper/css/bundle';
+@import '../css/blocks/banner.css';
+@import '../css/blocks/tasks.css';

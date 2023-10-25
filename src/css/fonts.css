@@ -1,41 +1,32 @@
 @font-face {
-    font-family: "IBMPlexSans";
-    src: url("IBMPlexSans.eot");
-    src:
-        local("IBMPlexSans"),
-        local("IBMPlexSans"),
-        url("../fonts/IBM-Plex-Sans/IBMPlexSans.eot?#iefix")
-        format("embedded-opentype"),
-        url("../fonts/IBM-Plex-Sans/IBMPlexSans.woff") format("woff"),
-        url("../fonts/IBM-Plex-Sans/IBMPlexSans.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
+  font-family: IBMPlexSans;
+  src: url('IBMPlexSans.eot');
+  src: local('IBMPlexSans'), local('IBMPlexSans'),
+    url('../fonts/IBM-Plex-Sans/IBMPlexSans.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/IBM-Plex-Sans/IBMPlexSans.woff') format('woff'),
+    url('../fonts/IBM-Plex-Sans/IBMPlexSans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "IBMPlexSans";
-    src: url("IBMPlexSans-Medium.eot");
-    src:
-        local("IBMPlexSans-Medium"),
-        local("IBMPlexSans-Medium"),
-        url("../fonts/IBM-Plex-Sans/IBMPlexSans-Medium.eot?#iefix")
-        format("embedded-opentype"),
-        url("../fonts/IBM-Plex-Sans/IBMPlexSans-Medium.woff") format("woff"),
-        url("../fonts/IBM-Plex-Sans/IBMPlexSans-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
+  font-family: IBMPlexSans;
+  src: url('IBMPlexSans-Medium.eot');
+  src: local('IBMPlexSans-Medium'), local('IBMPlexSans-Medium'),
+    url('../fonts/IBM-Plex-Sans/IBMPlexSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/IBM-Plex-Sans/IBMPlexSans-Medium.woff') format('woff'),
+    url('../fonts/IBM-Plex-Sans/IBMPlexSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "IBMPlexSans";
-    src: url("IBMPlexSans-SemiBold.eot");
-    src:
-        local("IBMPlexSans-SemiBold"),
-        local("IBMPlexSans-SemiBold"),
-        url("../fonts/IBM-Plex-Sans/IBMPlexSans-SemiBold.eot?#iefix")
-        format("embedded-opentype"),
-        url("../fonts/IBM-Plex-Sans/IBMPlexSans-SemiBold.woff") format("woff"),
-        url("../fonts/IBM-Plex-Sans/IBMPlexSans-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
+  font-family: IBMPlexSans;
+  src: url('IBMPlexSans-SemiBold.eot');
+  src: local('IBMPlexSans-SemiBold'), local('IBMPlexSans-SemiBold'),
+    url('../fonts/IBM-Plex-Sans/IBMPlexSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/IBM-Plex-Sans/IBMPlexSans-SemiBold.woff') format('woff'),
+    url('../fonts/IBM-Plex-Sans/IBMPlexSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }
