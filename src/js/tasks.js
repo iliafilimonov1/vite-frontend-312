@@ -6,11 +6,41 @@ const GLOBAL = {
   currentPage: window.location.pathname,
 }
 
-// Функция отрисовки карточек
-const renderData = () => {
+/**
+ * Функция отрисовки данных
+ * @param {string} filterValue - значение фильтра по категории
+ * @param {string} searchValue - значение поиска
+ */
+const renderData = (filterValue, searchValue) => {
   const swiperWrapper = document.querySelector('.swiper-wrapper')
 
-  data.forEach(function (product) {
+  swiperWrapper.innerHTML = '' // Очистка существующих карточек
+
+  /**
+   * Функция фильтрации и поиска данных
+   * @param {string} filterValue - значение фильтра по категории
+   * @param {string} searchValue - значение поиска
+   * @returns {Array} Отфильтрованный массив данных
+   */
+  const filterAndSearch = (filterValue, searchValue) => {
+    return data.filter((product) => {
+      // проверка фильтрации по категории
+      if (filterValue !== 'all' && product.category !== filterValue) {
+        // исключаем товары, к-ые не соотв. выбранной категории
+        return false
+      }
+      // проверка поиска по названию товара (без учета регистра)
+      // if(searchValue) {
+
+      // }
+      // если товар прошел оба условия, то он остается в результате фильтрации
+      return true
+    })
+  }
+
+  const filteredData = filterAndSearch(filterValue, searchValue)
+
+  filteredData.forEach(function (product) {
     const div = document.createElement('div') // Создать дивку
     div.classList.add('swiper-slide') // Добавить класс дивке
 
@@ -85,8 +115,12 @@ const renderData = () => {
 
     swiperWrapper.appendChild(div) // Вставка сформированной дивки в swiperWrapper
   })
+
   initTasksSwiper() // Вызов функции для инициализации слайдера
 }
+
+// вызов функции для первичной отрисовки
+renderData('all', '')
 
 function displayTasksDetails() {
   const taskUrlId = window.location.search.split('=')[1] // извлекаем id из адресной строки
