@@ -28,7 +28,8 @@ input[type='tel'],
 input[type='password'],
 input[type='email'],
 input[type='number'],
-textarea {
+textarea,
+select {
   background-color: var(--input-bg-color);
   color: var(--input-text-color);
   display: inline-block;
@@ -86,7 +87,8 @@ input[type='tel']:hover,
 input[type='password']:hover,
 input[type='email']:hover,
 input[type='number']:hover,
-textarea:hover {
+textarea:hover,
+select:hover {
   outline: var(--input-outline);
   outline-offset: -2px;
   border-color: transparent;
@@ -97,7 +99,8 @@ input[type='tel']:focus,
 input[type='password']:focus,
 input[type='email']:focus,
 input[type='number']:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: var(--input-outline);
   outline-offset: -2px;
   border-color: transparent;
@@ -108,12 +111,37 @@ input[type='tel']:disabled,
 input[type='password']:disabled,
 input[type='email']:disabled,
 input[type='number']:disabled,
-textarea:disabled {
+textarea:disabled,
+select:disabled {
   background-color: var(--input-bg-color-disabled);
   color: var(--input-color-disabled);
   border-bottom-color: transparent;
   user-select: none;
   pointer-events: none;
+}
+
+/* select {
+  background: url(../../images/icons/chevron-icon.svg) no-repeat right center #ddd;
+} */
+.select-container {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.select-container svg {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  cursor: pointer;
+  margin-top: -0.8px;
+}
+
+.select-container svg path {
+  fill: var(--logo-fill);
 }
 
 /* switcher */
