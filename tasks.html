@@ -467,6 +467,26 @@
         <div class="container">
           <h3>Dynamic cards</h3>
 
+          <form id="sort-form" action="#">
+            <div class="select-container">
+              <label for="category-sort">Фильтр по категории</label>
+              <select id="category-sort" name="category-sort">
+                <option value="all">Все</option>
+                <option value="chair">Стулья</option>
+                <option value="bed">Кровати</option>
+                <option value="bench">Скамейки</option>
+              </select>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8 11L3 6L3.7 5.3L8 9.6L12.3 5.3L13 6L8 11Z"
+                  fill="#161616"
+                />
+              </svg>
+            </div>
+          </form>
+
           <div class="swiper">
             <div class="swiper-wrapper">
               <!-- подгрузка карточек через JS  -->
