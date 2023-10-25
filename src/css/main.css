@@ -19,6 +19,7 @@ body {
 
 img,
 svg {
+  max-width: 100%;
   display: block; /* убираем зазор снизу */
 }
 

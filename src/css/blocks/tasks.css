@@ -70,10 +70,10 @@
 }
 
 .card-link {
-  display: block;
-  height: 100%;
-  max-width: 100%;
+  display: inline-block;
   width: 100%;
+  max-width: 100%;
+  min-height: 100%;
   position: absolute;
   background: transparent;
   z-index: 1;
@@ -196,13 +196,7 @@
   max-height: 100%;
 }
 
-.tasks-heart {
-  width: 24px;
-  z-index: 3;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+/* pagination dynamic cards */
 
 /* skeleton */
 .skeleton {
