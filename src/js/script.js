@@ -19,9 +19,6 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  // breakpoints: {
-  //     545: {},
-  // },
 })
 
 const inputText = document.querySelector('#register-username')

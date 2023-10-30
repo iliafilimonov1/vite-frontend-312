@@ -68,7 +68,7 @@
 }
 
 /* active bullet */
-.swiper-pagination-bullet-active {
+#banner .swiper-pagination-bullet-active {
   --swiper-theme-color: #fff;
 }
 
