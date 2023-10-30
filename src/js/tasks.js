@@ -35,7 +35,7 @@ const renderData = () => {
                   Ponta Delgada Ponta Delgada Ponta Delgada Ponta Delgada Ponta Delgada Ponta Delgada
                 </h3>
 
-                <div class="card-text__rating flex">
+                <div class="card-text__rating flex skeleton">
                   <svg
                     class="star"
                     width="12"
@@ -85,7 +85,6 @@ const renderData = () => {
 
     swiperWrapper.appendChild(div) // Вставка сформированной дивки в swiperWrapper
   })
-  initTasksSwiper() // Вызов функции для инициализации слайдера
 }
 
 function displayTasksDetails() {
@@ -103,7 +102,7 @@ function displayTasksDetails() {
     <div class="details-flex">
       <div class="details-card">
         <!-- Slider main container and our classes -->
-        <div class="swiper card-image">
+        <div class="swiper card-image skeleton">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -125,7 +124,7 @@ function displayTasksDetails() {
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination skeleton"></div>
         </div>
       </div>
 
@@ -157,9 +156,11 @@ function initTasksSwiper() {
     },
     slidesPerView: 4,
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 20,
   })
 }
+
+initTasksSwiper() // Вызов функции для инициализации слайдера
 
 /* Слайдер tasks-details */
 function initTasksDetailsSwiper() {
@@ -180,7 +181,6 @@ function initTasksDetailsSwiper() {
 
 // Инициализация перехода по страницам
 function init() {
-  console.log(GLOBAL.currentPage)
   switch (GLOBAL.currentPage) {
     case '/tasks.html':
       renderData()
