@@ -1,3 +1,12 @@
+/* Переменные для лого  */
+:root {
+  --bg: 0 0% 98%;
+  --color: 0 0% 22%;
+  --size: 4vmin;
+  --point: 86.6025;
+  --offset: calc((100 - var(--point)) * 0.5);
+}
+
 .header {
   color: var(--title-color);
   background-color: var(--body-color);
@@ -7,7 +16,34 @@
 }
 
 .header-logo {
+  border: 0;
   padding: 0;
+  max-width: 1rem;
+  max-height: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  filter: drop-shadow(0 0 calc(var(--size) * 0.125) hsl(0deg 0% 90%))
+    drop-shadow(0 0 calc(var(--size) * 0.45) hsl(0deg 0% 40%))
+    drop-shadow(0 0 calc(var(--size) * 0.5) hsl(0deg 0% 50%));
+}
+
+.header-logo:focus,
+.header-logo:active {
+  border: 2px solid transparent;
+}
+
+.logo {
+  width: var(--size);
+  aspect-ratio: 1;
+  background-color: hsl(var(--color));
+  clip-path: polygon(
+    0 calc((100 - var(--offset)) * 1%),
+    50% calc(var(--offset) * 1%),
+    100% calc((100 - var(--offset)) * 1%)
+  );
+  transition: background 0.2s;
 }
 
 .header-nav,

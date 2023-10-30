@@ -196,7 +196,10 @@
   max-height: 100%;
 }
 
-/* pagination dynamic cards */
+/* swiper */
+.dynamic .swiper-pagination-bullet-active {
+  --swiper-theme-color: #0f62fe;
+}
 
 /* skeleton */
 .skeleton {
