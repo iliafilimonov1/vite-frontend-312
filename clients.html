@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(0 0% 100%)" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0 0% 100%)" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="preload" href="src/fonts/IBM-Plex-Sans/IBMPlexSans.woff" as="font" type="font/woff" crossorigin="" />
+    <link
+      rel="preload"
+      href="src/fonts/IBM-Plex-Sans/IBMPlexSans-Medium.woff"
+      as="font"
+      type="font/woff"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="src/fonts/IBM-Plex-Sans/IBMPlexSans-SemiBold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="src/css/light.css" media="(prefers-color-scheme: light)" />
+    <link rel="stylesheet" href="src/css/dark.css" media="(prefers-color-scheme: dark)" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="flex">
+          <a href="#" class="header-logo">
+            <div class="logo"></div>
+          </a>
+
+          <nav class="header-nav">
+            <a class="header-nav__link active" href="index.html">Home</a>
+            <a class="header-nav__link" href="tasks.html">Tasks</a>
+            <a class="header-nav__link" href="#">Clients</a>
+            <a class="header-nav__link" href="#">Airbnb you home</a>
+          </nav>
+
+          <div class="header-buttons">
+            <button data-variant="secondary">Button</button>
+            <button id="signup" data-variant="primary">Sign up</button>
+          </div>
+
+          <fieldset class="switcher">
+            <input type="checkbox" class="switch" />
+            <label for="s2"></label>
+          </fieldset>
+
+          <div tabindex="0" class="btn-icon burger-menu ml-4" data-variant="ghost">
+            <div data-icon="icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 3H14V4H2V3ZM2 12H14V13H2V12ZM14 6H2V7H14V6ZM2 9H14V10H2V9Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- модалка навигации  -->
+    <dialog class="modal" id="modal-nav">
+      <div class="modal-wrapper">
+        <header>
+          <h2 class="modal-title">Navigation</h2>
+          <div id="close-modal" tabindex="0" class="btn-icon" data-variant="ghost">
+            <div data-icon="icon">
+              <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8 0.7L7.3 0L4 3.3L0.7 0L0 0.7L3.3 4L0 7.3L0.7 8L4 4.7L7.3 8L8 7.3L4.7 4L8 0.7Z"
+                  fill="#161616"
+                />
+              </svg>
+            </div>
+          </div>
+        </header>
+        <section>
+          <nav class="modal-nav">
+            <a class="modal-nav__link active" href="#"> Home </a>
+            <a class="modal-nav__link" href="tasks.html"> Tasks </a>
+            <a class="modal-nav__link" href="#"> Experiences </a>
+            <a class="modal-nav__link" href="#"> Airbnb you home </a>
+          </nav>
+        </section>
+      </div>
+    </dialog>
+
+    <!-- модалка формы  -->
+    <dialog class="modal" id="modal">
+      <div class="modal-wrapper">
+        <header>
+          <h2 class="modal-title">Contact us</h2>
+          <div id="close-modal" tabindex="0" class="btn-icon" data-variant="ghost">
+            <div data-icon="icon">
+              <svg width="12" height="12" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8 0.7L7.3 0L4 3.3L0.7 0L0 0.7L3.3 4L0 7.3L0.7 8L4 4.7L7.3 8L8 7.3L4.7 4L8 0.7Z"
+                  fill="#161616"
+                />
+              </svg>
+            </div>
+          </div>
+        </header>
+        <form action="#" id="registration-form">
+          <section>
+            <div class="input-container">
+              <label for="username">Your name</label>
+              <input
+                id="register-username"
+                name="username"
+                type="text"
+                placeholder="Name"
+                autocomplete="off"
+                required
+              />
+              <span class="input-error" id="username-error"></span>
+            </div>
+
+            <div class="input-container">
+              <label for="register-password">Your password</label>
+              <input
+                type="password"
+                id="register-password"
+                placeholder="Password"
+                autocomplete="off"
+                name="password"
+                required
+              />
+              <span class="input-error" id="password-error"></span>
+            </div>
+
+            <div class="input-container">
+              <label for="register-email">Input email</label>
+              <input type="email" id="register-email" placeholder="Email" autocomplete="off" name="email" required />
+              <span class="input-error" id="email-error"></span>
+            </div>
+
+            <div class="input-container">
+              <label for="register-phone">Input phone</label>
+              <input type="tel" placeholder="Phone" id="register-phone" name="phone" autocomplete="off" required />
+              <span class="input-error" id="phone-error"></span>
+            </div>
+
+            <div>
+              <label for="register-phone">Your message</label>
+              <textarea
+                cols="3"
+                rows="3"
+                placeholder="Enter your message"
+                id="register-message"
+                autocomplete="off"
+                required
+              ></textarea>
+            </div>
+
+            <!-- <div>
+                                    <label for="number"> Input Number </label>
+                                    <input
+                                        id="number"
+                                        type="number"
+                                        value="1"
+                                        placeholder="count"
+                                        autocomplete="off"
+                                    />
+                                </div> -->
+          </section>
+          <footer>
+            <button type="button" data-variant="primary">Submit</button>
+          </footer>
+        </form>
+      </div>
+    </dialog>
+
+    <main>
+      <section class="clients">
+        <div class="container">
+          <h3>Clients</h3>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/js/theme-switcher.js"></script>
+    <script type="module" src="src/js/script.js"></script>
+  </body>
+</html>
