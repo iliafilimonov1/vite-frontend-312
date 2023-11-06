@@ -1,3 +1,5 @@
+import '../sass/clients.sass'
+
 import { Modal } from './components/modal'
 import Swiper from 'swiper' // Инициализация слайдера
 import { Navigation, Pagination } from 'swiper/modules' // Инициализация иконок, пагинации и т.д.
