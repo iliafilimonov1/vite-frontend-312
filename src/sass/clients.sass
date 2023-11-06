@@ -1,3 +1,80 @@
-.clients
-  background-color: tomato
-  color: #000
+.grid-header,
+.grid-sidebar,
+.grid-aside,
+.grid-footer,
+.main-content
+  padding: 1.8rem
+
+.grid
+  background-color: #161616
+  color: #fff
+  font-size: 2.4rem
+  text-align: center
+  &-container
+    display: grid
+    grid-template-columns: 1fr /* Один столбец, расширяется  */
+    grid-template-rows: auto auto auto auto auto auto /* автоматическая высота */
+    grid-gap: 1.8rem /* Расстояние между ячейками */
+    max-width: 132rem
+    margin: 0 auto
+    padding: 0 1.6rem
+    box-sizing: border-box
+  &-header
+    background-color: #24A148
+  &-sidebar
+    background-color: #F1C21B
+  &-main
+    display: grid
+    /* Несколько столбцов, минимальная ширина 200зч, растягиваются */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    grid-gap: 2rem /* Расстояние между ячейками */
+  &-aside
+    background-color: #F1C21B
+
+  &-footer
+    background-color: #FA4D56
+
+.main-content
+  background-color: #A6C8FF
+  padding: 1.8rem
+  text-align: center
+
+@media (min-width: 768px)
+  .grid
+    &-container
+      grid-template-columns: 1fr 3fr 1fr
+      grid-template-rows: auto 1fr auto
+    &-header
+      grid-column: 1 / span 3 /* шапка занимает 3 столбца */
+    &-sidebar
+      grid-row: 2 / span 2 /* сайдбар занимает 2 строки */
+    &-main
+      grid-column: 2 / span 1 /* основной контект 1 столбец  */
+      grid-row: 2 /* основной контент начинается со 2 строки */
+    &-aside
+      grid-row: 2 / span 2 /* боковая панель занимает 2 строки */
+    &-footer
+      grid-column: 1 / span 3 /* footer занимает 3 столбца */
+  .main-content
+    grid-column: auto
+    grid-row: auto
+
+@media (min-width: 1200px)
+  .grid
+    &-container
+      grid-template-columns: 1fr 2fr 1fr 1fr
+      grid-template-rows: auto 1fr auto
+    &-header
+      grid-column: 1 / span 4 /* шапка занимает 4 столбца */
+    &-main
+      grid-column: 2 / span 2 /* основной контект 2 столбца  */
+      grid-row: 2 /* основной контент начинается со 2 строки */
+    &-aside
+      grid-column: 4 /* боковая панель находится в 4 столбце */
+      grid-row: 2 / span 2 /* боковая панель занимает 2 строки */
+    &-footer
+      grid-column: 1 / span 4 /* footer занимает 4 столбца */
+
+@media (min-width: 1600px)
+
+
